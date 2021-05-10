@@ -4,5 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean name="theCoach" class="com.example.demo.model.CricketCoach">
 </bean>
-
+<bean name="toDo" class="com.example.demo.model.Todo" destroy-method="destrorToDo" init-method="init" scope="prototype">
+<constructor-arg name="todoId" value="todo-1"/>
+<constructor-arg name="desc" value="Compile"/>
+<constructor-arg name="isCompleted" value="true"/>
+</bean>
 </beans>
